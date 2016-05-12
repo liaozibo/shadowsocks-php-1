@@ -16,5 +16,7 @@
 		"Liubinzh\\ShadowSocks\\": "src/"
 	  },
 	  "classmap": ["src/"]
-	}
+	},
+    "minimum-stability": "dev"
+
 }
