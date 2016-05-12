@@ -35,9 +35,9 @@ class ShadowSocksServer
 	{
 		$this->config = [
 			'daemon'=>false,
-			'server'=>'',
-			'server_port'=>'',
-			'password'=>'',
+			'server'=>'0.0.0.0',
+			'server_port'=>443,
+			'password'=>'123123',
 			'method'=>'aes-256-cfb'
 		];
 		$argv = getopt('c:d');
@@ -61,6 +61,7 @@ class ShadowSocksServer
 		$this->serv->on('connect', [$this, 'onConnect']);
 		$this->serv->on('receive', [$this, 'onReceive']);
 		$this->serv->on('close', [$this, 'onClose']);
+		$this->logger = new \Katzgrau\KLogger\Logger(getcwd().'/logs');
 	}
 
 	public function onConnect($serv, $fd)
