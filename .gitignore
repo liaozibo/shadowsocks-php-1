@@ -1,0 +1,7 @@
+/logs
+*.log
+/vendor
+composer.phar
+composer.lock
+.DS_Store
+shadowsocks.json
