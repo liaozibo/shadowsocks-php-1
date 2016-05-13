@@ -1,5 +1,6 @@
 <?php
 namespace Liubinzh\ShadowSocks;
+use Katzgrau\KLogger\Logger;
 
 // 状态相关
 define('STAGE_INIT', 0);
@@ -61,7 +62,7 @@ class ShadowSocksServer
 		$this->serv->on('connect', [$this, 'onConnect']);
 		$this->serv->on('receive', [$this, 'onReceive']);
 		$this->serv->on('close', [$this, 'onClose']);
-		$this->logger = new \Katzgrau\KLogger\Logger(getcwd().'/logs');
+		$this->logger = new Logger(getcwd().'/logs');
 	}
 
 	public function onConnect($serv, $fd)

@@ -9,14 +9,13 @@
         }
     ],
     "require": {
-        "katzgrau/klogger": "dev-master"
+	    "ext-swoole": ">=1.8.5",
+        "katzgrau/klogger": "*"
     },
 	"autoload": {
 	  "psr-4": {
 		"Liubinzh\\ShadowSocks\\": "src/"
 	  },
 	  "classmap": ["src/"]
-	},
-    "minimum-stability": "dev"
-
+	}
 }
